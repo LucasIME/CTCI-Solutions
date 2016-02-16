@@ -1,23 +1,6 @@
-class Node():
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+from node import Node
 
-    def appendToTail(self, data):
-        no =  self
-        while no.next != None:
-            no = no.next
-        no.next = Node(data)
-    def __repr__(self):
-        resp = ""
-        no = self
-        while no.next != None:
-            resp += str(no.data) + ' -> '
-            no = no.next
-        resp += str(no.data)
-        return resp
-
-def f1(head):
+def removeDuplicates(head):
     d = {}
     no = head
     d[no.data] =  True
@@ -28,12 +11,12 @@ def f1(head):
         else:
             no.next = no.next.next
 
-def f2(head):
+def removeDuplicatesNoExtraMemory(head):
     current = head
     while current != None:
         runner = current
         while runner.next != None:
-            if runner.next.data == current.data
+            if runner.next.data == current.data:
                 runner.next = runner.next.next
             else:
                 runner = runner.next
@@ -52,7 +35,7 @@ def main():
     head.appendToTail(7)
     head.appendToTail(9)
     print head
-    f(head)
+    removeDuplicates(head)
     print head
 if __name__ == '__main__':
     main()
