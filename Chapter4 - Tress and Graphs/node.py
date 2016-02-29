@@ -10,3 +10,9 @@ class Graph():
 class Tree():
     def __init__(self, data):
         self.root = Node(data)
+
+class BNode():
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
