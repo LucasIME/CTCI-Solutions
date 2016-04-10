@@ -43,13 +43,16 @@ def getPathsWithSum( root, num):
     return resp
 
 def main():
-    a = BNode(1)
-    a.left = BNode(0)
-    a.right = BNode(2)
-    a.left.left = BNode(2)
-    a.right.left = BNode(1.5)
-    a.right.right = BNode(3)
-    print getPathsWithSum(a, 3)
+    a = BNode(10)
+    a.left = BNode(5)
+    a.right = BNode(-3)
+    a.left.left = BNode(3)
+    a.left.left.left = BNode(3)
+    a.right.right = BNode(11)
+    a.left.right = BNode(2)
+    a.left.right.right = BNode(1)
+    a.left.left.right = BNode(-2)
+    print getPathsWithSum(a, 8)
     #print getAllPaths(a)
     #print getSubsequenceSum( [1,5,2,3, 4, 8, 7], 7)
 if __name__ == '__main__':
