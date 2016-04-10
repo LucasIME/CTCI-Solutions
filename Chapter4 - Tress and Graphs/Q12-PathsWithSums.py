@@ -1,5 +1,6 @@
 from node import *
 
+#my 1st solution
 def getAllPaths(root):
     paths = []
     jafoi = set()
@@ -42,6 +43,36 @@ def getPathsWithSum( root, num):
                 resp.append(subSeq)
     return resp
 
+#Book's solution
+
+def countPathsWithSum(root, targetSum):
+    if root == None:
+        return 0
+    pathCount = {}
+    incrementHashTable(pathCount, 0, 1)
+    return realCount(root, targetSum, 0, pathCount)
+
+def realCount(node, targetSum, runningSum, pathCount):
+    if node == None:
+        return 0
+    runningSum += node.data
+    incrementHashTable(pathCount, runningSum, 1)
+
+    soma = runningSum - targetSum
+    totalPaths = pathCount[soma] if soma in pathCount else 0
+
+    totalPaths += realCount(node.left, targetSum, runningSum, pathCount)
+    totalPaths += realCount(node.right, targetSum, runningSum, pathCount)
+
+    incrementHashTable(pathCount, runningSum, -1)
+    return totalPaths
+
+def incrementHashTable( hashTable, key, delta):
+    if key not in hashTable:
+        hashTable[key] = 0
+    hashTable[key] += delta
+
+
 def main():
     a = BNode(10)
     a.left = BNode(5)
@@ -53,6 +84,7 @@ def main():
     a.left.right.right = BNode(1)
     a.left.left.right = BNode(-2)
     print getPathsWithSum(a, 8)
+    print countPathsWithSum(a, 8)
     #print getAllPaths(a)
     #print getSubsequenceSum( [1,5,2,3, 4, 8, 7], 7)
 if __name__ == '__main__':
