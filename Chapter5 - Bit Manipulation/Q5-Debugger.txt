@@ -1,0 +1,1 @@
+The code ((n & (n-1))) == 0 checks if a number N is a power of two or not.
