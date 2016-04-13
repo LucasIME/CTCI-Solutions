@@ -1,0 +1,4 @@
+For each of the bottles, you put i pills from the i-th bottle in the scale. 
+This way, the total weight W will be (1 + 2 +3 + 4  + ...  + 20) +  ( i* 0.1). 
+So, the total weight will be: W = 210 + 0.1i, finding that the heavier pills are in the i-th bottle.
+i = (W - 210)/0.1
