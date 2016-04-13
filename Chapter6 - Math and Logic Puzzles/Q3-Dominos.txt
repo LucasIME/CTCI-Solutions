@@ -1,0 +1,5 @@
+If we take a closer look at how the chessboard is, we'll notice that opposite corners are always squares of the same color.
+So, when we remove the 2 opposite corners from the chessboard, we'll be removing 2 whites squares or 2 black squares.
+This way, there will be 29 squares of a color and 31 squares of another color remaining in the chessboard.
+But, whenever we place a domino piece in the chessboard, it always exactly 2 squares, one black and one white.
+This way, there is no way we can cover the whole chessboard, because there will be always, at least, 2 squares of the same color remaining that are not together.
