@@ -1,0 +1,14 @@
+Given that p is the probability of making a particular shot:
+
+Chance of Winning Game 1: P1 = p
+Chance of Winnig Game 2: P2 = p*p*(1-p) + p*(1-p)*p + (1-p)*p*p + p*p*p =  p*p*( 3(1-p) +p) = pp(3 - 2p)
+
+In order to choose Game 1 we need P1 > P2:
+    p > p*p(3-2p)
+    1 > p(3-2p)
+    1 > 3p - 2p*p
+    2p*p -3p +1 > 0
+    Roots:  (-(-3) +- sqrt( 9 - 4*2*1 ))/2*3 -> x1 = 0.5  and x2 = 1
+
+So, one should pick Game 1 when 0 < p = 0.5
+and Game 2 otherwise.
