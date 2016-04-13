@@ -1,0 +1,9 @@
+For no ants on a n-vertex polygon to collide, all of them have to choose the same direction.
+
+That is, after the 1st ant chooses any direction, all the other ants have to pick this same direction.
+
+Therefore, the probability of no collisions is P1= (0.5)^(n-1)
+
+Then, the chance of having collisions is: P = 1 - P1 = 1 - (0.5)ˆ(n-1)
+
+For the Triangle: P = 3/4
