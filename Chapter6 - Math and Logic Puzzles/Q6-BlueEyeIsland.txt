@@ -1,0 +1,3 @@
+If there is only 1 person with blue eyes, this person will see no other and leave of the first night.
+If there are 2, the blue-eyed persons don't know if there are c=1 or c=2 persons with blue eyes. If after the first night, the other person continues there, it means that c=2 and both of them leave on the 2nd night.
+Extending that argumento to N persons with blue eyes, it will take them N days to leave the island, all of them leaving on the Nth day.
