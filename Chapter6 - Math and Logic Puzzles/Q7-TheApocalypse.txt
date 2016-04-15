@@ -1,0 +1,17 @@
+Assumptions: Every family if going to have children until they have exactly one Girl.
+
+Assuming n families and a normal distribution:
+50% of the families are going to be: G
+25%: BG
+12.5%: BBG
+6.25%: BBBG
+...
+
+Following that line we can calculate the number of girls: n (1 per family)
+and the number of boys: n/4*1 + n/8*2 + n/16*3 + n/32 *4 + ...
+Sb = n/4 + 2*n/8 + 3*n/16 + ///
+Sb - Sb/2 = Sb/2 = n/4 + n/8 + n/16 + n/32 + ...
+Sb/2 = n/2
+Sb = n
+
+Since the number of girls is the same as the numbers of boys, the proportion of the next generation is going to be 1:1.
