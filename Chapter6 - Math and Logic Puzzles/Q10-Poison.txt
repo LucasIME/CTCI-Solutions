@@ -1,0 +1,3 @@
+We can discover the poison bottle in 7 days.
+All we need to to is, for each bottle, get the number N written in the label, check its binary form and put a drop of the liquid in a stripe whenever there is a 1 in the binary representation.
+This way, in the 7th day the number of the poison bottle will be written in its binary form in the stripes.
