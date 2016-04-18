@@ -1,0 +1,5 @@
+For every ith door, we toggle their "value" X number of divisors of i added to 1 (because we also count 1).
+This way, every prime number is only going to be toggled 2 times (on the 1st time and on the ith time), finishing closed.
+Following this reasoning, the only numbers that have a odd number of divisord are perfect square numbers.
+So, at the end of the process there would be only 10 doors open (1*1, 2*2, 3*3, ... , 10*10).
+
