@@ -1,0 +1,12 @@
+We start by dropping the egg from the 1st floor. If it breakes, N=1.
+If it doesn't, we keep doubling the level of the floor we drop the egg from. So 1, 2, 4, 8, 16, etc...
+When it finaly breaks at a given level, let's say K, we know that the N we are looking for is in the range: K/2 < N <= K
+So we just start to drop the 2nd egg we have from the level K+1 until we find the level it breaks.
+If the level of breaking the egg is N, our process takes at most log(N) + N/2 drops to find the correct level.
+
+For the particular case where we have 100 floors, we can achieve a better average case, start dropping egg1 from lvl 10, and the next drop being from level (Past level + 10 - i) where i is the ith drop.
+this way: we get to the equaition x + (x-1) + (x-2) + ... + 1 = 100 => x(x+1)/2 = 100 => x=13.65 => x=14
+so, with this method it would take us at most 14 drops to find the level where the egg breaks
+Using this method, the process has a complexity of sqrt(K), where K is the total number of levels.
+
+Altough this last method has a better complexity, it would not be possible to use it in a scenario with an infinite amount of levels.
