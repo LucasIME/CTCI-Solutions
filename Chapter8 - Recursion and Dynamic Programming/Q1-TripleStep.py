@@ -13,9 +13,21 @@ def countWays(n):
         if i-3 >= 0:
             steps[i] += steps[i-3]
     return steps[n]
+
+def countWaysNoMem(n):
+    t0 = 0
+    t1 = 0
+    t2 = 1
+    for i in range(n):
+        t2 = t0 + t1 + t2
+        t1 = t2 - t0 - t1
+        t0 = t2 - t1 - t0
+    return t2
+
 def main():
     for i in range(1, 10):
         print countWays(i)
+        print "No mem: ", countWaysNoMem(i)
     print countWays(10)
 
 if __name__ == '__main__':
