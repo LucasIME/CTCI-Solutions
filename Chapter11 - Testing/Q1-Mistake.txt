@@ -1,0 +1,2 @@
+The variable i is an Unsigned intenger and the for condition is (i >=0). When i gets to zero, after the --i, the value of i will get to a positive integer, never stopping the loop.
+Also, one should use %u and not %d to print unsigned ints.
