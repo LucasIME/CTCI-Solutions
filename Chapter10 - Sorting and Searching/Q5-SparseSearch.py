@@ -18,7 +18,7 @@ def binSearch(v, left, right, target):
             return binSearch(v, left, mid-1, target)
 
 def main():
-    v = ["at", "", "", "", "ball", "",  "", "car", "", "", "dad", "", ""];
+    v = ["at", "", "", "", "ball", "",  "", "car", "", "", "dad", "", ""]
     print binSearch(v,0, len(v)-1, "ball")
 if __name__ == "__main__":
     main()
